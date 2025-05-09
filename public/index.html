@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Travel Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>AI Travel Planner 🌍</h1>
+    <form id="travelForm">
+      <div class="input-group">
+        <label for="startDate">Tanggal Mulai:</label>
+        <input type="date" id="startDate" required>
+      </div>
+      <div class="input-group">
+        <label for="endDate">Tanggal Berakhir:</label>
+        <input type="date" id="endDate" required>
+      </div>
+      <input type="hidden" id="days" name="days">
+
+      <div class="input-group">
+        <label for="budget">Anggaran:</label>
+        <input type="text" id="budget" placeholder="Contoh: Rp5.000.000" required>
+      </div>
+
+      <div class="input-group">
+        <label for="destination">Tujuan (contoh: Bali):</label>
+        <input type="text" id="destination" placeholder="Masukkan tujuan Anda" required>
+      </div>
+
+      <div class="input-group">
+        <label for="transportation">Jenis Transportasi:</label>
+        <select id="transportation">
+          <option value="darat">Darat</option>
+          <option value="laut">Laut</option>
+          <option value="udara">Udara</option>
+        </select>
+      </div>
+
+      <button type="submit">Buat Rencana</button>
+    </form>
+    <div id="output"></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
